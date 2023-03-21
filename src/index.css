@@ -5,9 +5,64 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  align-items: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  height: 70px;
+  background-color: orange;
+  color:black;
+  padding: 20px;
+}
+
+header img{
+  height: 100%;
+  margin-right: 10px;
+  color: white;
+}
+
+header h1{
+  font-size: 35px;
+  margin-right: auto;
+}
+header h2{
+  font-size: 25px;
+}
+
+.form{
+  padding: 40px;
+  display: grid;
+  grid-template: 40px 40px/ 1fr 1fr;
+  gap: 17px;
+  align-items: center;
+}
+
+.form input{
+  height: 50px;
+  border-radius: 0.2em;
+  border: 2px solid black;
+  font-size: 21px;
+  text-indent: 5px;
+}
+
+input:focus{
+  border: orange;
+}
+
+.form button{
+  height: 55px;
+  grid-column: 1/ -1;
+  background-color: orange;
+  color: black;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
 }
