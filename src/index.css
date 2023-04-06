@@ -59,3 +59,21 @@ input:focus{
   cursor: pointer;
   font-size: 20px;
 }
+
+.imgholder{
+  align-items: center;
+  background-color: orange;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  justify-content: center;
+  text-align: center;
+}
+.img-meme{
+  justify-content: center;
+  text-align: center;
+  width: 400px;
+  height: auto;
+  align-items: center;
+  padding: 20px;
+}

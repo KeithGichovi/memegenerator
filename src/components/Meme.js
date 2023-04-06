@@ -1,18 +1,29 @@
-import React from "react";
+import React, {useState} from "react";
 import memesData from "./memesData";
-let imgurl;
+
 function Meme() {
+    const [meme, setMeme] = useState({
+
+        topText: "",
+        bottomText: "",
+        randomImg: ""
+
+    })
+
+    const[allMemeImg, setAllMemeImgs] = useState(memesData);
 
     function handleClick() {
         //get the length of the meme array
-        let memeLength = memesData.data.memes;
+        let memeLength = allMemeImg.data.memes;
         // generate code to give us random number, it gives us a whole number
         let randomImg = Math.floor(Math.random() * memeLength.length);
         //with the nth element generated from the line above we use it to get a random image.
-        imgurl = memeLength[randomImg].url;
+        //we are also using the React use state function that I declared to attain the link of the image.
+        const url = memeLength[randomImg].url;
+        setMeme(prevMeme => ({...prevMeme,randomImg: url}));
 
     }
-
+     
     return(
 
         <main>
@@ -25,6 +36,10 @@ function Meme() {
                     Get meme Image
                 </button>
             </div>
+            <div className="imgholder">
+                <img className="img-meme" src={meme.randomImg} alt="" />
+            </div>
+
         </main>
 
     )
